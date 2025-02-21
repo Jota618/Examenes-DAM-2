@@ -1,0 +1,104 @@
+/* Fonts */
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../Ubuntu-R.ttf');
+}
+
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #2E8B57, #66CDAA); /* Gradient background */
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Main Container */
+main {
+  box-sizing: border-box;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 1200px;
+  transform-style: preserve-3d;
+}
+
+/* Application Cards */
+.aplicacion {
+  background: white;
+  color: #2E8B57;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.aplicacion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+
+.icono {
+  font-size: 48px;
+  margin-bottom: 10px;
+  color: #20B2AA;
+}
+
+/* Logo Styles */
+#logo {
+  width: 50px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+/* Close Session Button */
+#cerrarsesion {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+#cerrarsesion:hover {
+  transform: scale(1.1);
+  color: #FFD700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .aplicacion {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+
+  .icono {
+    font-size: 36px;
+  }
+}

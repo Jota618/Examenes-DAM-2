@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de Gráfico Sankey</title>
+  <!-- Actualizar nombre del archivo CSS -->
+  <link rel="stylesheet" href="jocarsa_floralwhite.css">
+  <style>
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Título centrado -->
+  <h1>Ejemplo de Gráfico Sankey Mínimo</h1>
+  
+  <button id="save-btn">Guardar Gráfico</button>
+
+  <div id="chart-container"></div>
+
+  <!-- Actualizar nombre del archivo JavaScript -->
+  <script src="jocarsa_floralwhite.js"></script>
+  <script>
+    const data = {
+      "nodes": [
+        { "name": "Alumno 1", "color": "#1f77b4" },
+        { "name": "Alumno 2" }, // Se asignará un color aleatorio
+        { "name": "Alumno 3", "color": "#ff7f0e" },
+        { "name": "Alumno 4" }, // Se asignará un color aleatorio
+        { "name": "Empresa 1", "color": "#2ca02c" },
+        { "name": "Empresa 2", "color": "#d62728" }
+      ],
+      "links": [
+        { "source": 0, "target":4, "value": 1 },
+        { "source": 1, "target": 4, "value": 3 },
+        { "source": 2, "target": 4, "value": 4 },
+        { "source": 3, "target": 5, "value": 2 }
+      ]
+    };
+
+    // Renderizar el gráfico Sankey
+    jocarsaFloralwhite.createSankeyChart({
+      element: '#chart-container',
+      data: data,
+      width: 600,
+      height: 800,
+      nodeWidth: 120,
+      nodePadding: 10
+    });
+  </script>
+</body>
+</html>

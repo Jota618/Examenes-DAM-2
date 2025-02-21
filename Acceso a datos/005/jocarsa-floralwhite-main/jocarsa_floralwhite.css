@@ -1,0 +1,91 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Make body take full viewport height */
+  flex-direction: column;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 800px;
+  border: 1px solid #ddd;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 80%; /* Reduced width to fit content better */
+  max-width: 900px; /* Optional: Max width for responsiveness */
+}
+
+/* Additional styling for Sankey chart */
+.jocarsa-floralwhite-svg {
+  width: 100%;
+  height: auto;
+}
+
+.jocarsa-floralwhite-node rect {
+  transition: fill 0.3s ease;
+}
+
+.jocarsa-floralwhite-node rect:hover {
+  fill: #ff8c00; /* Orange on hover */
+}
+
+.jocarsa-floralwhite-text {
+  font-size: 14px;
+  fill: #ffffff;
+  pointer-events: none;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.jocarsa-floralwhite-link {
+  transition: stroke-opacity 0.3s ease;
+}
+
+.jocarsa-floralwhite-link:hover {
+  stroke-opacity: 0.7;
+}
+
+/* Style for save button */
+#save-btn {
+  background-color: #007bff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#save-btn:hover {
+  background-color: #0056b3;
+}

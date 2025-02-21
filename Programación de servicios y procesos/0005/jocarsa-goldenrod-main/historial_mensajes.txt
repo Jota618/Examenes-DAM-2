@@ -1,0 +1,4 @@
+Enviado: Un mensaje de prueba
+Recibido: El servidor recibió tu mensaje: Un mensaje de prueba
+Enviado: Habia una vez un barquito chiquitito
+Recibido: El servidor recibió tu mensaje: Habia una vez un barquito chiquitito

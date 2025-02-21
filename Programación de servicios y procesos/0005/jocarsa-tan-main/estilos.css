@@ -1,0 +1,151 @@
+/* Importamos una fuente moderna desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Variables de colores y estilos */
+:root {
+  --primary-color: #3498db;       /* Azul principal */
+  --secondary-color: #2ecc71;     /* Verde secundario */
+  --background-color: #f5f7fa;    /* Fondo general */
+  --header-background: #ffffff;   /* Fondo del header de la tabla */
+  --text-color: #333333;          /* Color de texto */
+  --border-color: #dddddd;        /* Color de bordes */
+  --button-bg: #3498db;
+  --button-hover-bg: #2980b9;
+  --control-bg: #ffffff;
+  --control-border: #cccccc;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 20px;
+  color: var(--text-color);
+}
+
+h1, h2 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+/* Contenedor de controles */
+#controls {
+  background-color: var(--control-bg);
+  border: 1px solid var(--control-border);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow);
+}
+
+#controls h2 {
+  margin-top: 0;
+  font-weight: 500;
+}
+
+#controls label {
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+/* Controles tipo range y búsqueda */
+#controls input[type="range"] {
+  width: 150px;
+  vertical-align: middle;
+}
+
+#controls input[type="text"] {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid var(--control-border);
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+/* Select para esquema de colores */
+#controls select {
+  padding: 5px;
+  border: 1px solid var(--control-border);
+  border-radius: 4px;
+  background-color: #fff;
+  margin-left: 5px;
+}
+
+/* Botones */
+#controls button {
+  background-color: var(--button-bg);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#controls button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+/* Encabezado de la tabla */
+thead {
+  background-color: var(--header-background);
+}
+
+th {
+  font-weight: 500;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+th:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Celdas */
+td {
+  font-weight: 400;
+  background-color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Filas alternadas y efecto hover */
+tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+tr:hover td {
+  background-color: #eaf2f8;
+}
+
+/* Estadísticas */
+#stats {
+  margin-top: 15px;
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+
+#stats p {
+  margin: 5px 0;
+}
